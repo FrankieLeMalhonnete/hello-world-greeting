@@ -29,7 +29,7 @@ pipeline {
       stages {
         stage('Livraison continue') {
           steps {
-            sh "curl -u admin:password --upload-file target/*.war 'http://http://10.10.20.31:8081/repository/depot_test/app.java_agent${BUILD_NUMBER}.war'"
+            sh "curl -u admin:password --upload-file target/*.war 'http://10.10.20.31:8081/repository/depot_test/app.java_agent${BUILD_NUMBER}.war'"
           }
         }
       }
