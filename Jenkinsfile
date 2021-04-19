@@ -45,7 +45,7 @@ pipeline {
         }
         stage('Validation de l\'application') {
           steps {
-            sh "curl -u admin:password --upload-file /home/jenkins/tomcat/webapps/app.war 'http://10.10.20.31:8081/repository/hello_fiable/app_fiable.build-${BUILD_NUMBER}.war'"
+            sh "curl -u admin:password --upload-file /home/jenkins/apache-tomcat/webapps/app.war 'http://10.10.20.31:8081/repository/hello_fiable/app_fiable.build-${BUILD_NUMBER}.war'"
           }
         }
       }
