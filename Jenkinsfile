@@ -16,7 +16,7 @@ pipeline {
     }
     stage ('Publication du binaire') {
       steps {
-        sh "curl -u admin:password --upload-file target/*.war 'http://http://10.10.20.31:8081/repository/agent_java/app${BUILD_NUMBER}.war'"
+        sh "curl -u admin:password --upload-file target/*.war 'http://http://10.10.20.31:8081/repository/depot_test/app.java_agent${BUILD_NUMBER}.war'"
       }
     }
   }
