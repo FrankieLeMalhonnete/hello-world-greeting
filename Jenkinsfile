@@ -58,13 +58,13 @@ pipeline {
       stages {
         stage('Téléchargement du binaire') {
           steps {
-            sh 'wget -P /home/vagrant/docker/tomcat_app http://10.10.20.31:8081/repository/hello_fiable/app_fiable.build-${BUILD_NUMBER}.war'
-            sh 'mv /home/vagrant/docker/tomcat_app/app_fiable.build-${BUILD_NUMBER}.war /home/vagrant/docker/tomcat_app/app.war'
+            sh 'wget -P /home/jenkins/docker/tomcat_app http://10.10.20.31:8081/repository/hello_fiable/app_fiable.build-${BUILD_NUMBER}.war'
+            sh 'mv /home/jenkins/docker/tomcat_app/app_fiable.build-${BUILD_NUMBER}.war /home/jenkins/docker/tomcat_app/app.war'
           }
         }
         stage('Compilation de l\'image') {
           steps {
-            sh 'docker build -t tomcat_app /home/vagrant/docker/tomcat_app'
+            sh 'docker build -t tomcat_app /home/jenkins/docker/tomcat_app'
           }
         }
         stage('Stockage de l\'image sur Docker Hub') {
