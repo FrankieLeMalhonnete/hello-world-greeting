@@ -59,7 +59,7 @@ pipeline {
         stage('Téléchargement du binaire') {
           steps {
             sh 'wget -P /home/vagrant/docker/tomcat_app http://10.10.20.31:8081/repository/hello_fiable/app_fiable.build-${BUILD_NUMBER}.war'
-            sh 'mv /home/vagrant/docker/tomcat_app/app_fiable.build-${BUILD_NUMBER}.war /home/vagrant/docker/tomcat_app/app.war
+            sh 'mv /home/vagrant/docker/tomcat_app/app_fiable.build-${BUILD_NUMBER}.war /home/vagrant/docker/tomcat_app/app.war'
           }
         }
         stage('Compilation de l\'image') {
