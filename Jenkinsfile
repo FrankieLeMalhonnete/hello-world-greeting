@@ -35,7 +35,7 @@ pipeline {
         stage('Téléchargement du binaire') {
           steps {
             sh "wget -P /home/jenkins/apache-tomcat/webapps http://10.10.20.31:8081/repository/depot_test/app.build-${BUILD_NUMBER}.war"
-            sh "mv /home/jenkins/apache-tomcat/webapps/app.build-${BUILD_NUMBER}.war /home/jenkins/apache-tomcat/webapps/app.war
+            sh "mv /home/jenkins/apache-tomcat/webapps/app.build-${BUILD_NUMBER}.war /home/jenkins/apache-tomcat/webapps/app.war"
           }
         }
         stage('Test de performance') {
