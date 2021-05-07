@@ -71,7 +71,7 @@ pipeline {
           steps {
             sh 'docker tag tomcat_app frankielemalhonnete/tomcat_app:${BUILD_NUMBER}'
             sh 'docker tag tomcat_app frankielemalhonnete/tomcat_app'
-            sh 'docker login -u frankielemalhonnete -p DCKRottoroot21!'
+            sh 'docker login -u frankielemalhonnete -p REDACTED!'
             sh 'docker push frankielemalhonnete/tomcat_app:${BUILD_NUMBER}'
             sh 'docker push frankielemalhonnete/tomcat_app'
           }
